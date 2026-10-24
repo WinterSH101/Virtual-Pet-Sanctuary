@@ -12,13 +12,40 @@ class Pet {
     }
 }
 
-const myPet = new Pet("Buddy", "Dog");
+const petNameInput = document.getElementById("petName");
+const addPetButton = document.getElementById("addPetButton");
+const sanctuary = document.getElementById("sanctuary");
 
-const hungerDisplay = document.getElementById("hungerDisplay");
-const feedButton = document.getElementById("feedButton");
+addPetButton.addEventListener("click", function (){
 
-feedButton.addEventListener("click", function (){
-    myPet.feed();
+    const name = petNameInput.value;
 
-    hungerDisplay.textContent = myPet.hunger
+    if (name ==="") {
+        alert("Please enter a pet name.");
+    }
+    const pet = new Pet(name, "Dog");
+
+    const petCard = document.createElement("div");
+
+    const nameDisplay = document.createElement("h2");
+    nameDisplay.textContent = pet.name;
+
+    const hungerDisplay = document.createElement("p");
+    hungerDisplay.textContent = `Hunger: ${pet.hunger}`;
+
+    const feedButton = document.createElement("button");
+    feedButton.textContent = "Feed";
+
+    feedButton.addEventListener("click", function (){
+        pet.feed();
+        hungerDisplay.textContent = `Hunger: ${pet.hunger}`;
+    });
+
+    petCard.appendChild(nameDisplay);
+    petCard.appendChild(hungerDisplay);
+    petCard.appendChild(feedButton);
+
+    sanctuary.appendChild(petCard);
+
+    petNameInput.value = "";
 });

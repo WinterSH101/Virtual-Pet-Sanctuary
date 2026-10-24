@@ -6,3 +6,6 @@ In this phase, I created a Pet class and used it to make two different pets. I l
 ## Phase 2
 In this phase, I connected the Pet class to a button on the webpage. When I click the Feed Pet button, it runs the feed() method and changes the hunger level on the screen. Using the event listener was pretty easy to understand, but figuring out how to connect the JavaScript to the right HTML element was a little confusing at first.
 <br><br>
+## Phase 3
+In this phase, I went from having one pet to being able to add multiple pets. It helped me understand how each pet is its own object with its own hunger level. The Pet class makes this much easier because I can keep creating new pets without having to write separate code for every single one.
+<br><br>
