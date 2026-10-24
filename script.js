@@ -8,7 +8,7 @@ class Pet {
         return `I am a ${this.type} named ${this.name}.`;
     }
     feed(){
-        this.hunger -= 10;
+        this.hunger = Math.max(0, this.hunger - 10);
     }
 }
 

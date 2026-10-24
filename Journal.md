@@ -9,3 +9,5 @@ In this phase, I connected the Pet class to a button on the webpage. When I clic
 ## Phase 3
 In this phase, I went from having one pet to being able to add multiple pets. It helped me understand how each pet is its own object with its own hunger level. The Pet class makes this much easier because I can keep creating new pets without having to write separate code for every single one.
 <br><br>
+## Phase 4
+While testing my code, I noticed that the hunger level could go below 0 if I kept feeding a pet. I fixed that so it would stop at 0. I also made sure that feeding one pet doesn't change the hunger level of another pet. The most helpful suggestion was keeping each Feed Button connected to its own pet because it keeps everything separate and working correctly.
